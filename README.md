@@ -1,7 +1,6 @@
 # QA-transformer-model
-This project uses 
-1. GRU, and
-2. BERT 
-to train a question answering model.
 
-The data provides a question as well as a corpora of text containing the answer, the model produces a True or False label. The GRU model is implemented using pytorch and the sentence embeddings are produced using Gensim. The transfomer model is trained using BERT.
+This project uses BERT to perform the downstream tasking question answering on boolean (yes/no) questions. 
+It uses HuggingFace to install and train the model and its tokenizer and then uses Pytorch to customize the model for boolean question answering. This model acheives a 73% accuracy on the test set but can be improved with the use of a GPU strong enough to handle a larger batch size.
+
+Dependencies: pytorch, transformers, datasets, pandas (to generate a prediction file).
